@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employeeeDetails" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="adcbdae2-bb6a-4d4f-a9d6-6609eb9c1190">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgreslocal"/>
+	<queryString language="SQL">
+		<![CDATA[select id, firstname,lastname,department  from employee]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="firstname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="firstname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="lastname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lastname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="department" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="department"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="800" height="50" uuid="30104e1b-2148-4460-9732-0aa313d5a90d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEE DETAILS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="6ef03eeb-2ff9-4d1e-8d24-cadd515d3817">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dfd69c1a-432f-4847-9e5c-ecc7616c4b47"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="100" height="30" uuid="81c927cc-32bf-47ec-b758-bf397db48c64">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bb15dc1-9e82-4e4a-890f-a0723a2b8156"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRSTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="100" height="30" uuid="791ec05d-5b4e-4882-8c36-ee6031e919dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4a60bd6-a88d-4c17-b5fd-1957bd67b71c"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LASTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="0" width="100" height="30" uuid="e99351b7-03cb-41c5-994c-bf4b1017d778">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc2d7ffa-668b-43c3-9df1-fa20b2379e2b"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="28" uuid="2a1f8c02-9572-424a-b308-929b848efd88">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dfd69c1a-432f-4847-9e5c-ecc7616c4b47"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="0" width="100" height="28" uuid="20d186a2-252f-4001-a53c-9479339644b3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bb15dc1-9e82-4e4a-890f-a0723a2b8156"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="100" height="28" uuid="1fc91ec4-dd3a-4096-8990-ff69aa075464">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4a60bd6-a88d-4c17-b5fd-1957bd67b71c"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="100" height="28" uuid="6f12fcb9-ca8c-4715-8388-767899efd731">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc2d7ffa-668b-43c3-9df1-fa20b2379e2b"/>
+					<property name="net.sf.jasperreports.export.xls.auto.fit.row" value="true"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
